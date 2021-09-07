@@ -1,8 +1,8 @@
 ## Változók
 
-Változókat használunk **értékek tárolására**:
+Változókat használunk **értékek tárolására**.
 
-A változóknak van **nevük** és **értékük**
+A változóknak van **nevük** és **értékük**:
 
 | Név  | Érték |
 | ------------- | ------------- |
@@ -35,6 +35,6 @@ A következő kifejezésekre:
 1 < 10
 5 == 5
 ```
-*eldöntendő kérdésként hivatkozunk korábban.*
+*eldöntendő kérdésként* hivatkozunk korábban.
 
 [Vissza a főoldalra](../blob/master/README.md)

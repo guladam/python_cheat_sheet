@@ -37,4 +37,4 @@ A következő kifejezésekre:
 ```
 *eldöntendő kérdésként* hivatkozunk korábban.
 
-[Vissza a főoldalra](../blob/master/README.md)
+[Vissza a főoldalra](../README.md)

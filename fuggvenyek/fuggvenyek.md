@@ -64,3 +64,6 @@ Végül egy print() függvényhívás következik, aminek 1 db argumentuma lesz:
 
 > Az olyan függvényeket, amelyek nem térnek vissza semmilyen értékkel (nincs outputjuk) **eljárás**oknak nevezzük. Ilyen például a beépített print() függvény is, ami kiír a képernyőre, de nem tér vissza
  semmilyen értékkel.
+
+
+[Vissza a főoldalra](../README.md)

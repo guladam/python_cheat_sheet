@@ -58,7 +58,7 @@ A függvény itt befejezi a működését, a  **return** kulcsszóval visszaadju
 
 A vezérlés visszakerül a főprogramhoz, a függvény által visszaadott 80 értéket behelyettesítjük a hívás helyére. A **kerulet** változóban tároljuk a 80 értéket.
 
-Végül egy print() függvényhívás következik, aminek 1 db argumentuma lesz: a **kerulet*- változóban tárolt érték. A függvény a futtatás után kiírja a képernyőre a 80 értéket.
+Végül egy print() függvényhívás következik, aminek 1 db argumentuma lesz: a **kerulet** változóban tárolt érték. A függvény a futtatás után kiírja a képernyőre a 80 értéket.
 
 ![Négyzet kerület 5](negyzet_kerulet_05.png "Négyzet kerület 5")
 

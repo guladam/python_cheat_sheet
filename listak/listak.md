@@ -13,7 +13,10 @@ Korábban volt szó adattípusokról: egész számok, valós számok, szövegek 
 ```python
 [1, 2, 3, 4, 5]
 ```
-- Egy listában bármilyen adattípusú elem szerepelhet: ["alma", 1]
+- Egy listában bármilyen adattípusú elem szerepelhet: 
+```python
+["alma", 1]
+```
 - Listákat is (csakúgy mint bármilyen más adattípusú értéket) változókban tudunk eltárolni:
 ```python
 dobokocka = [1, 2, 3, 4, 5, 6]

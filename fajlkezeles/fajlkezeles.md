@@ -14,7 +14,7 @@ A második argumentum a **megnyitás módja**. Python nyelven az alábbi megnyit
 
 ![Fájl megnyitási módok](fajl_megnyitasi_modok.png "Fájl megnyitási módok")
 
-> MI A KÜLÖNBSÉG AZ ÍRÁS ÉS A HOZZŰFÉS KÖZÖTT?<br>Az írás mindig felülírja a fájl eddigi tartalmát, míg a hozzáfűzés a fájl végéről kezd el írni a fájlba.
+> MI A KÜLÖNBSÉG AZ ÍRÁS ÉS A HOZZÁFŰZÉS KÖZÖTT?<br>Az írás mindig felülírja a fájl eddigi tartalmát, míg a hozzáfűzés a fájl végéről kezd el írni a fájlba.
 
 Az **open()** függvény a megnyitott fájl hivatkozásával tér vissza, amit érdemes egy változóban tárolni a műveletvégzéshez.
 

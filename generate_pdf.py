@@ -30,7 +30,8 @@ def convert_md_to_pdf(md_files):
         html = name.split(".")[0] + ".html"
         pdf = pdf_dir + name.split(".")[0] + ".pdf"
         os.system("grip {} --export {}".format(name, html))
-        os.system("weasyprint {} {}".format(html, pdf))
+        os.chdir(cwd)
+        os.system("./html_to_pdf.sh {} {}".format(pdf, path[:-2] + "html"))
 
 
 if __name__ == "__main__":

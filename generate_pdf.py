@@ -1,6 +1,8 @@
 import os
 
-PDF_DIR = ".\\_pdf\\"
+
+PDF_DIR = "_pdf/"
+
 
 def main():
     walk_directories()
@@ -21,10 +23,15 @@ def walk_directories():
 
 
 def convert_md_to_pdf(md_files):
+    cwd = os.getcwd()
+    pdf_dir = os.path.join(cwd, PDF_DIR)
     for name, path in md_files.items():
-        pdf = PDF_DIR + name.split(".")[0] + ".pdf"
-        print(pdf)
-        os.system("pandoc {} -f markdown -t pdf -s -o {}".format(path, pdf))
+        os.chdir(os.path.join(cwd, os.path.dirname(path)))
+        html = name.split(".")[0] + ".html"
+        pdf = pdf_dir + name.split(".")[0] + ".pdf"
+        os.system("grip {} --export {}".format(name, html))
+        os.chdir(cwd)
+        os.system("./html_to_pdf.sh {} {}".format(pdf, path[:-2] + "html"))
 
 
 if __name__ == "__main__":

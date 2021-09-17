@@ -68,35 +68,33 @@
               <article class="markdown-body entry-content" itemprop="text" id="grip-content">
                 <h2>
 <a id="user-content-fájlkezelés" class="anchor" href="#f%C3%A1jlkezel%C3%A9s" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Fájlkezelés</h2>
-<p>Eddigi programjainkban a beolvasás és a kiíratás is a standard bemeneten és a kimeneten történt. Sokszor előfordul viszont, hogy adatokat fájlokból akarunk beolvasni vagy az eredményeket fájlba írni. Mindkét esetben kötelező <strong>megnyitni</strong> a fájlt. Ehhez a beépített <em>open()</em> függvényt használjuk:</p>
+<p>Eddigi programjainkban a beolvasás és a kiíratás is a standard bemeneten és a kimeneten történt. Sokszor előfordul viszont, hogy adatokat fájlokból akarunk beolvasni vagy az eredményeket fájlba írni. Mindkét esetben kötelező <strong>megnyitni</strong> a fájlt. Ehhez a beépített <code>open()</code> függvényt használjuk:</p>
 <p><a href="open_fuggveny.png" target="_blank" rel="noopener noreferrer"><img src="open_fuggveny.png" alt="Open függvény" title="Open függvény" style="max-width:100%;"></a></p>
 <p>Ha a fájl karakterkódolása eltér az operációs rendszer alapértelmezett kódolásától, akkor harmadik argumentumként megadhatjuk a karakterkódolást is:</p>
 <div class="highlight highlight-source-python"><pre><span class="pl-en">open</span>(<span class="pl-s">"fajl.txt"</span>, <span class="pl-s">"r"</span>, <span class="pl-s1">encoding</span><span class="pl-c1">=</span><span class="pl-s">"utf-8"</span>)</pre></div>
 <p>A második argumentum a <strong>megnyitás módja</strong>. Python nyelven az alábbi megnyitási módokból lehet választani:</p>
 <p><a href="fajl_megnyitasi_modok.png" target="_blank" rel="noopener noreferrer"><img src="fajl_megnyitasi_modok.png" alt="Fájl megnyitási módok" title="Fájl megnyitási módok" style="max-width:100%;"></a></p>
-<blockquote>
-<p>MI A KÜLÖNBSÉG AZ ÍRÁS ÉS A HOZZÁFŰZÉS KÖZÖTT?<br>Az írás mindig felülírja a fájl eddigi tartalmát, míg a hozzáfűzés a fájl végéről kezd el írni a fájlba.</p>
-</blockquote>
-<p>Az <strong>open()</strong> függvény a megnyitott fájl hivatkozásával tér vissza, amit érdemes egy változóban tárolni a műveletvégzéshez.</p>
+<p>MI A KÜLÖNBSÉG AZ ÍRÁS ÉS A HOZZÁFŰZÉS KÖZÖTT?<br>
+Az írás mindig felülírja a fájl eddigi tartalmát, míg a hozzáfűzés a fájl végéről kezd el írni a fájlba.</p>
+<p>Az <code>open()</code> függvény a megnyitott fájl hivatkozásával tér vissza, amit érdemes egy változóban tárolni a műveletvégzéshez.</p>
 <p>A letárolt fájlhivatkozással sok műveletet végre tudunk hajtani. A műveleteket a megnyitott fájl hivatkozásának metódusain keresztül érjük el. Ezek közül a legfontosabbak:</p>
 <ul>
 <li>
-<strong>readline()</strong>: beolvassa a fájl aktuális sorát, szöveg típusú adatként. A <em>readline()</em> beolvassa a sorok végén található új sor ("\n") karaktert is!</li>
+<code>readline()</code>: beolvassa a fájl aktuális sorát, szöveg típusú adatként. A <code>readline()</code> beolvassa a sorok végén található újsor (<code>\n</code>) karaktert is!</li>
 </ul>
 <p><a href="fajl_beolvasas_pelda.png" target="_blank" rel="noopener noreferrer"><img src="fajl_beolvasas_pelda.png" alt="Fájl beolvasás példa" title="Fájl beolvasás példa" style="max-width:100%;"></a></p>
-<blockquote>
-<p>Tipp:<br>
-Ha elértük a fájl végét, a <em>readline()</em> egy üres sztringgel tér vissza. Az üres sztringet két idézőjel határolóval jelöljük: ""</p>
-</blockquote>
+<pre><code>TIPP&lt;br&gt;
+Ha elértük a fájl végét, a `readline()` egy üres sztringgel tér vissza. Az üres sztringet két idézőjel határolóval jelöljük: `""`
+</code></pre>
 <ul>
 <li>
-<p><strong>readlines()</strong>: egyszerre beolvassa a fájl <strong>összes</strong> sorát. A visszaadott érték egy lista, amiben a fájl összes sora szerepel, szöveg típusú adatként.</p>
+<p><code>readlines()</code>: egyszerre beolvassa a fájl <strong>összes</strong> sorát. A visszaadott érték egy lista, amiben a fájl összes sora szerepel, szöveg típusú adatként.</p>
 </li>
 <li>
-<p><strong>close()</strong>: bezárja a megnyitott fájlt. Ha végeztünk a fájl olvasásával / írásával <em><strong>MINDIG</strong></em> zárjuk be a megnyitott fájlt!</p>
+<p><code>close()</code>: bezárja a megnyitott fájlt. Ha végeztünk a fájl olvasásával / írásával <em><strong>MINDIG</strong></em> zárjuk be a megnyitott fájlt!</p>
 </li>
 </ul>
-<p>Legyen adott a gyumolcsok.txt fájl, amely a következő sorokat tartalmazza:</p>
+<p>Legyen adott a <code>gyumolcsok.txt</code> fájl, amely a következő sorokat tartalmazza:</p>
 <p><a href="gyumolcsok.png" target="_blank" rel="noopener noreferrer"><img src="gyumolcsok.png" alt="Gyümölcsök" title="Gyümölcsök" style="max-width:100%;"></a></p>
 <p>Ezeket a gyümölcsöket szeretnénk <strong>beolvasni a fájlból</strong>, majd összegyűjteni egy <strong>listában</strong>.</p>
 <ol>
@@ -104,12 +102,12 @@ Ha elértük a fájl végét, a <em>readline()</em> egy üres sztringgel tér vi
 </ol>
 <div class="highlight highlight-source-python"><pre><span class="pl-s1">gyumolcsok</span> <span class="pl-c1">=</span> []</pre></div>
 <ol start="2">
-<li>Megnyitjuk a gyumolcsok.txt nevű, <em>UTF-8</em> kódolású fájlt olvasási módban (<strong>r</strong>).<br> A fájlhivatkozást tároljuk egy változóban.</li>
+<li>Megnyitjuk a gyumolcsok.txt nevű, <em>UTF-8</em> kódolású fájlt olvasási módban (<code>"r"</code>).<br> A fájlhivatkozást tároljuk egy változóban.</li>
 </ol>
 <div class="highlight highlight-source-python"><pre><span class="pl-s1">gyumolcsok</span> <span class="pl-c1">=</span> []
 <span class="pl-s1">fajl</span> <span class="pl-c1">=</span> <span class="pl-en">open</span>(<span class="pl-s">"gyumolcsok.txt"</span>, <span class="pl-s">"r"</span>, <span class="pl-s1">encoding</span><span class="pl-c1">=</span><span class="pl-s">"utf-8"</span>)</pre></div>
 <ol start="3">
-<li>Beolvassuk és tároljuk az első sort, a <em>readline()</em> metódussal.</li>
+<li>Beolvassuk és tároljuk az első sort, a <code>readline()</code> metódussal.</li>
 </ol>
 <div class="highlight highlight-source-python"><pre><span class="pl-s1">gyumolcsok</span> <span class="pl-c1">=</span> []
 <span class="pl-s1">fajl</span> <span class="pl-c1">=</span> <span class="pl-en">open</span>(<span class="pl-s">"gyumolcsok.txt"</span>, <span class="pl-s">"r"</span>, <span class="pl-s1">encoding</span><span class="pl-c1">=</span><span class="pl-s">"utf-8"</span>)
@@ -135,7 +133,7 @@ Ha elértük a fájl végét, a <em>readline()</em> egy üres sztringgel tér vi
     <span class="pl-s1">gyumolcsok</span>.<span class="pl-en">append</span>(<span class="pl-s1">sor</span>)
     <span class="pl-s1">sor</span> <span class="pl-c1">=</span> <span class="pl-s1">fajl</span>.<span class="pl-en">readline</span>()</pre></div>
 <ol start="6">
-<li>A ciklus után már biztosan elértük a fájl végét. Ezután bezárjuk a fájlt a <em>close()</em> metódussal.</li>
+<li>A ciklus után már biztosan elértük a fájl végét. Ezután bezárjuk a fájlt a <code>close()</code> metódussal.</li>
 </ol>
 <div class="highlight highlight-source-python"><pre><span class="pl-s1">gyumolcsok</span> <span class="pl-c1">=</span> []
 <span class="pl-s1">fajl</span> <span class="pl-c1">=</span> <span class="pl-en">open</span>(<span class="pl-s">"gyumolcsok.txt"</span>, <span class="pl-s">"r"</span>, <span class="pl-s1">encoding</span><span class="pl-c1">=</span><span class="pl-s">"utf-8"</span>)
@@ -166,16 +164,14 @@ Ha elértük a fájl végét, a <em>readline()</em> egy üres sztringgel tér vi
 <a id="user-content-írás-fájlba" class="anchor" href="#%C3%ADr%C3%A1s-f%C3%A1jlba" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Írás fájlba</h3>
 <p>A másik gyakori művelet a fájlba történő írás. A módszer nem sokban tér el az olvasástól:</p>
 <ul>
-<li>Először megnyitjuk a fájl az <em>open()</em> függvénnyel, írás módban (<strong>w</strong>).</li>
-<li>Ezután beleírjuk, amit szeretnénk. Ehhez a szokásos print() függvényt használjuk.</li>
+<li>Először megnyitjuk a fájl az <code>open()</code> függvénnyel, írás módban (<code>"w"</code>).</li>
+<li>Ezután beleírjuk, amit szeretnénk. Ehhez a szokásos <code>print()</code> függvényt használjuk.</li>
 <li>Végül nem felejtjük el bezárni a fájlt, ha végeztünk az írással.</li>
 </ul>
-<blockquote>
-<p><strong>FONTOS!</strong><br>
-A print() függvénynek megadhatjuk, hogy a standard kimenet helyett egy fájlba írjon, a file nevű argumentummal:</p>
-</blockquote>
+<p>FONTOS!<br>
+A <code>print()</code> függvénynek megadhatjuk, hogy a standard kimenet helyett egy fájlba írjon, a <code>file</code> nevű, elnevezett argumentummal:</p>
 <div class="highlight highlight-source-python"><pre><span class="pl-en">print</span>(<span class="pl-s1">lista</span>, <span class="pl-s1">file</span><span class="pl-c1">=</span><span class="pl-s1">fajl</span>)</pre></div>
-<p>A következő program kiszámolja az első 100 természetes szám négyzetét, majd beleírja soronként egy <em>negyzetszamok.txt</em> nevű fájlba:</p>
+<p>A következő program kiszámolja az első <code>100</code> természetes szám négyzetét, majd beleírja soronként egy <code>negyzetszamok.txt</code> nevű fájlba:</p>
 <p><a href="negyzetszamok_program.png" target="_blank" rel="noopener noreferrer"><img src="negyzetszamok_program.png" alt="Négyzetszámok program" title="Négyzetszámok program" style="max-width:100%;"></a></p>
 <p>Ha futtatjuk a programot, a standard kimenet (a terminálablak) üres marad:</p>
 <p><a href="negyzetszamok_output.png" target="_blank" rel="noopener noreferrer"><img src="negyzetszamok_output.png" alt="Négyzetszámok kimenet" title="Négyzetszámok kimenet" style="max-width:100%;"></a></p>

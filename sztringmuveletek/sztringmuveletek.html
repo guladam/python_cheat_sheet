@@ -68,12 +68,13 @@
               <article class="markdown-body entry-content" itemprop="text" id="grip-content">
                 <h2>
 <a id="user-content-sztringműveletek" class="anchor" href="#sztringm%C5%B1veletek" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Sztringműveletek</h2>
-<blockquote>
-<p><em>Megjegyzés</em><br>Mielőtt elkezdjük, nézzünk meg két fontos speciális karaktert Pythonban:</p>
-</blockquote>
+<p>MEGJEGYZÉS<br>
+Mielőtt elkezdjük, nézzünk meg két fontos speciális karaktert Pythonban:</p>
 <ul>
-<li>"\n" -&gt; újsor karakter</li>
-<li>"\t" -&gt; tabulátor karakter</li>
+<li>
+<code>"\n"</code> -&gt; újsor karakter</li>
+<li>
+<code>"\t"</code> -&gt; tabulátor karakter</li>
 </ul>
 <p>Amikor beszéltünk a listákról, akkor volt szó arról, hogy a listákkal tudunk különböző műveleteket végezni. Ez ugyanígy igaz a sztring (szöveg) típusú adatokra is. Néhány hasznos művelet a teljesség igénye nélkül:</p>
 <ul>
@@ -82,46 +83,44 @@
 <div class="highlight highlight-source-python"><pre><span class="pl-s">"Rick"</span> <span class="pl-c1">+</span> <span class="pl-s">"Sanchez"</span> <span class="pl-c"># -&gt; "RickSanchez"</span></pre></div>
 <ul>
 <li>
-<strong>lower()</strong>: kisbetűsíti a sztringet</li>
+<code>lower()</code>: kisbetűsíti a sztringet</li>
 </ul>
 <div class="highlight highlight-source-python"><pre><span class="pl-s1">nev</span> <span class="pl-c1">=</span> <span class="pl-s">"Batman"</span>
 <span class="pl-s1">nev</span>.<span class="pl-en">lower</span>() <span class="pl-c"># -&gt; "batman"</span></pre></div>
 <ul>
 <li>
-<strong>upper()</strong>: kisbetűsíti a sztringet</li>
+<code>upper()</code>: nagybetűsíti a sztringet</li>
 </ul>
 <div class="highlight highlight-source-python"><pre><span class="pl-s1">nev</span> <span class="pl-c1">=</span> <span class="pl-s">"Batman"</span>
 <span class="pl-s1">nev</span>.<span class="pl-en">upper</span>() <span class="pl-c"># -&gt; "BATMAN"</span></pre></div>
 <ul>
 <li>
-<strong>strip()</strong>: levágja a sztring eljéről és a  végéről a whitespace karaktereket.</li>
+<code>strip()</code>: levágja a sztring eljéről és a  végéről a whitespace karaktereket.</li>
 </ul>
 <div class="highlight highlight-source-python"><pre><span class="pl-s1">mondat</span> <span class="pl-c1">=</span> <span class="pl-s">"  <span class="pl-cce">\t</span> Ez a mondat hosszú. <span class="pl-cce">\t</span> <span class="pl-cce">\n</span>"</span>
 <span class="pl-s1">mondat</span>.<span class="pl-en">strip</span>() <span class="pl-c"># -&gt; "Ez a mondat hosszú."</span></pre></div>
 <ul>
 <li>
-<strong>split(<em>hatarolo</em>)</strong>: egy sztringet feldarabol sztringek listájára, a megadott <em>hataralo</em> karakter(sorozat) mentén.</li>
+<code>split(hatarolo)</code>: egy sztringet feldarabol sztringek listájára, a megadott <code>hataralo</code> karakter(sorozat) mentén.</li>
 </ul>
 <p><a href="adatsor.png" target="_blank" rel="noopener noreferrer"><img src="adatsor.png" alt="adatsor" title="adatsor" style="max-width:100%;"></a></p>
 <div class="highlight highlight-source-python"><pre><span class="pl-s1">adatsor</span>.<span class="pl-en">split</span>(<span class="pl-s">"<span class="pl-cce">\t</span>"</span>) <span class="pl-c"># -&gt; ["Batman", "Bruce Wayne", "DC Comics", "1939"]</span></pre></div>
 <ul>
 <li>
-<strong>join(<em>lista</em>)</strong>: egy sztringekből álló listát összefűz egy sztringgé, a megadott határoló karakter(sorozat) mentén:</li>
+<code>join(lista)</code>: egy sztringekből álló listát összefűz egy sztringgé, a megadott határoló karakter(sorozat) mentén:</li>
 </ul>
 <div class="highlight highlight-source-python"><pre><span class="pl-s1">lista</span> <span class="pl-c1">=</span> [<span class="pl-s">"Wabba"</span>, <span class="pl-s">"labba"</span>, <span class="pl-s">"dub"</span>, <span class="pl-s">"dub"</span>]
 <span class="pl-s">" "</span>.<span class="pl-en">join</span>(<span class="pl-s1">lista</span>) <span class="pl-c"># -&gt; "Wabba labba dub dub"</span></pre></div>
 <ul>
 <li>
-<strong>replace(<em>mit</em>, <em>mire</em>)</strong>: egy sztringben a <em>mit</em> sztring összes előfordulását lecseréli a <em>mire</em> sztringre.</li>
+<code>replace(mit, mire)</code>: egy sztringben a <code>mit</code> sztring összes előfordulását lecseréli a <code>mire</code> sztringre.</li>
 </ul>
 <div class="highlight highlight-source-python"><pre><span class="pl-s">"1,075654"</span>.<span class="pl-en">replace</span>(<span class="pl-s">","</span>, <span class="pl-s">"."</span>) <span class="pl-c"># -&gt; "1.075654"</span>
 <span class="pl-s">"23,03445"</span>.<span class="pl-en">replace</span>(<span class="pl-s">","</span>, <span class="pl-s">"."</span>) <span class="pl-c"># -&gt; "23.03445"</span>
 <span class="pl-s">"9001,075"</span>.<span class="pl-en">replace</span>(<span class="pl-s">","</span>, <span class="pl-s">"."</span>) <span class="pl-c"># -&gt; "9001.075"</span></pre></div>
-<blockquote>
-<p><em>Megjegyzés</em><br>
+<p>MEGJEGYZÉS<br>
 A legtöbb sztringműveletet a szöveg típusú adatok metódusain keresztül érhetjük el.<br>
-Ez alól kivételt képez az összefűzés művelet, amihez a + (plusz) operátort használjuk.</p>
-</blockquote>
+Ez alól kivételt képez az összefűzés művelet, amihez a <code>+</code> (plusz) operátort használjuk.</p>
 <p><a href="../README.md">Vissza a főoldalra</a></p>
 
               </article>

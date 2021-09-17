@@ -70,8 +70,8 @@
 <a id="user-content-sorozatokról-bővebben-bejárás-szeletés-hossz-lekérdezése-szorzás" class="anchor" href="#sorozatokr%C3%B3l-b%C5%91vebben-bej%C3%A1r%C3%A1s-szelet%C3%A9s-hossz-lek%C3%A9rdez%C3%A9se-szorz%C3%A1s" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Sorozatokról bővebben: bejárás, szeletés, hossz lekérdezése, szorzás</h2>
 <h3>
 <a id="user-content-sorozatok-bejárása" class="anchor" href="#sorozatok-bej%C3%A1r%C3%A1sa" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Sorozatok bejárása</h3>
-<p>A <strong>while</strong> ciklusnál a logikai kifejezésre (eldöntendő kérdésre) adott válasz dönti el, hogy ismételjük-e a ciklusmag utasításait vagy lépünk a ciklus utáni első utasításra. Amíg  a válasz igen (<em>True</em>), addig ismételjük a ciklusmagot. Az első nem (<em>False</em>) válasz esetén a ciklus után folytatódik a program.</p>
-<p>A másik lehetőségünk a <strong>for</strong> ciklus használata. Ennek segítségével <strong>sorozatok elemeit</strong> járjuk be, egyesével. Ezeknél a sorozatoknál a hosszúságuk alapján tudjuk, hogy a ciklusmag hányszor fog lefutni. Például egy 10 elemű sorozat esetén egyesével végig megyünk az elemeken, majd a 10. ciklusmag befejeződése után a ciklus utáni következő utasításra lépünk. Háromféle sorozat bejárására van lehetőségünk:</p>
+<p>A <code>while</code> ciklusnál a logikai kifejezésre (eldöntendő kérdésre) adott válasz dönti el, hogy ismételjük-e a ciklusmag utasításait vagy lépünk a ciklus utáni első utasításra. Amíg  a válasz igen (<code>True</code>), addig ismételjük a ciklusmagot. Az első nem (<code>False</code>) válasz esetén a ciklus után folytatódik a program.</p>
+<p>A másik lehetőségünk a <code>for</code> ciklus használata. Ennek segítségével <strong>sorozatok elemeit</strong> járjuk be, egyesével. Ezeknél a sorozatoknál a hosszúságuk alapján tudjuk, hogy a ciklusmag hányszor fog lefutni. Például egy <code>10</code> elemű sorozat esetén egyesével végig megyünk az elemeken, majd a 10. ciklusmag befejeződése után a ciklus utáni következő utasításra lépünk. Háromféle sorozat bejárására van lehetőségünk:</p>
 <h4>
 <a id="user-content-1-szöveg-sztring-mint-sorozat" class="anchor" href="#1-sz%C3%B6veg-sztring-mint-sorozat" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><strong>1. Szöveg (sztring), mint sorozat</strong>
 </h4>
@@ -90,38 +90,36 @@
 <a id="user-content-3-generált-intervallum-mint-sorozat" class="anchor" href="#3-gener%C3%A1lt-intervallum-mint-sorozat" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><strong>3. Generált intervallum, mint sorozat</strong>
 </h4>
 <ul>
-<li>
-<strong>Számonként</strong> megyünk végig a generált, egészekből álló intervallumon.</li>
-<li>A generáláshoz a beépített <em>range()</em> függvényt használjuk</li>
+<li>Ilyenkor <strong>Számonként</strong> megyünk végig a generált, egészekből álló intervallumon.</li>
+<li>A generáláshoz a beépített <code>range()</code> függvényt használjuk</li>
 </ul>
 <p><a href="range_for.png" target="_blank" rel="noopener noreferrer"><img src="range_for.png" alt="Range for" title="Range for" style="max-width:100%;"></a></p>
 <h4>
 <a id="user-content-hogyan-működik-a-range-függvény" class="anchor" href="#hogyan-m%C5%B1k%C3%B6dik-a-range-f%C3%BCggv%C3%A9ny" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Hogyan működik a range() függvény?</h4>
 <ul>
-<li>range(n) —&gt; egy argumentummal a [0, n-1],</li>
-<li>range(a, b) —&gt; két argumentummal az [a, b-1],</li>
-<li>range(a, b, 2) —&gt; három argumentummal pedig az [a, b-1] intervallumon generálunk számokat, de kettes lépésközzel.</li>
-<li>Az utolsó esetre egy példa: <br>range(1, 10, 2) —&gt; 1, 3, 5, 7, 9 számokból álló sorozat</li>
+<li>
+<code>range(n)</code> —&gt; egy argumentummal a <code>[0, n-1]</code>,</li>
+<li>
+<code>range(a, b)</code> —&gt; két argumentummal az <code>[a, b-1]</code>,</li>
+<li>
+<code>range(a, b, 2)</code> —&gt; három argumentummal pedig az <code>[a, b-1]</code> intervallumon generálunk számokat, de kettes lépésközzel.</li>
+<li>Az utolsó esetre egy példa: <br><code>range(1, 10, 2)</code> —&gt; <code>1, 3, 5, 7, 9</code> számokból álló sorozat</li>
 </ul>
-<blockquote>
 <p><strong>TIPP</strong><br>
 Ha 100 000-szer akarunk valamit ismételni, elég körülményes lenne kézzel készíteni egy 100 000 elemű listát.<br>
-Ilyen esetekben (is) hasznos a range() függvény használata.</p>
-</blockquote>
+Ilyen esetekben (is) hasznos a <code>range()</code> függvény használata.</p>
 <h3>
 <a id="user-content-sorozatok-indexelése" class="anchor" href="#sorozatok-indexel%C3%A9se" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Sorozatok indexelése</h3>
-<p>A <strong>sorozatok</strong> egyes elemeit eddig egyféleképpen indexeltük, hivatkoztuk, a [0, n-1] intervallumról vett egész számmal. Python nyelven azonban lehetőségünk van negatív irányban történő indexelésre is. Így könnyedén tudjuk hivatkozni egy sorozat (pl. lista vagy szöveg) legutolsó elemét, anélkül is, hogy tudnánk hány elemből áll:</p>
+<p>A <strong>sorozatok</strong> egyes elemeit eddig egyféleképpen indexeltük, hivatkoztuk, a <code>[0, n-1]</code> intervallumról vett egész számmal. Python nyelven azonban lehetőségünk van negatív irányban történő indexelésre is. Így könnyedén tudjuk hivatkozni egy sorozat (pl. lista vagy szöveg) legutolsó elemét, anélkül is, hogy tudnánk hány elemből áll:</p>
 <p><a href="sorozat_indexeles.png" target="_blank" rel="noopener noreferrer"><img src="sorozat_indexeles.png" alt="Sorozatok indexelése" title="Sorozatok indexelése" style="max-width:100%;"></a></p>
-<p>A negatív indexelés <strong>MINDIG</strong> a –1
+<p>A negatív indexelés <strong>MINDIG</strong> a <code>–1</code>
 értékről indul!</p>
-<blockquote>
 <p><strong>TIPP</strong><br>
 Ez az indexelés működik listák és szövegek (sztringek) esetében is.</p>
-</blockquote>
 <h3>
 <a id="user-content-sorozatok-szeletelése-vágása-slicing" class="anchor" href="#sorozatok-szeletel%C3%A9se-v%C3%A1g%C3%A1sa-slicing" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Sorozatok szeletelése, vágása (slicing)</h3>
-<p>Python nyelven a <strong>sorozatokat</strong> nagyon egyszerűen szét tudjuk vágni részekre. A <strong>vágás</strong> hasonlóan működik a <em>range()</em> függvény paraméterezéséhez, csak a szintaktikája egy kicsit másabb.</p>
-<p>A vágáskor ugyanúgy hivatkozunk a sorozat elemeire szögletes zárójelek [ ] között, mint amikor 1 elemet hivatkozunk.</p>
+<p>Python nyelven a <strong>sorozatokat</strong> nagyon egyszerűen szét tudjuk vágni részekre. A <strong>vágás</strong> hasonlóan működik a <code>range()</code> függvény paraméterezéséhez, csak a szintaktikája egy kicsit másabb.</p>
+<p>A vágáskor ugyanúgy hivatkozunk a sorozat elemeire szögletes zárójelek <code>[ ]</code> között, mint amikor <code>1</code> elemet hivatkozunk.</p>
 <p>A vágásnak három paramétere van:</p>
 <ol>
 <li>hányadik elem<strong>től</strong>,</li>
@@ -129,7 +127,7 @@ Ez az indexelés működik listák és szövegek (sztringek) esetében is.</p>
 </li>
 <li>és mekkora <strong>lépésköz</strong>zel vágunk.</li>
 </ol>
-<p>A paramétereket : (kettőspont) karakter választja el egymástól.</p>
+<p>A paramétereket <code>:</code> (kettőspont) karakter választja el egymástól.</p>
 <p>Néhány példa:</p>
 <div class="highlight highlight-source-python"><pre><span class="pl-s1">nyelv</span> <span class="pl-c1">=</span> <span class="pl-s">"PYTHON"</span>
 
@@ -141,20 +139,26 @@ Ez az indexelés működik listák és szövegek (sztringek) esetében is.</p>
 <span class="pl-s1">nyelv</span>[<span class="pl-c1">0</span>:<span class="pl-c1">6</span>:<span class="pl-c1">2</span>] <span class="pl-c"># -&gt; "PTO"</span>
 <span class="pl-s1">nyelv</span>[::<span class="pl-c1">2</span>]   <span class="pl-c"># -&gt; "PTO"</span>
 <span class="pl-s1">nyelv</span>[<span class="pl-c1">1</span><span class="pl-c1">+</span><span class="pl-c1">2</span>:]  <span class="pl-c"># -&gt; "HON"</span></pre></div>
-<blockquote>
-<p><strong>FONTOS!</strong><br>
-A range() függvényhez hasonlóan, az intervallum vége nyitott, azaz a második helyen megadott indexű elem már nem lesz része az eredménynek!</p>
-</blockquote>
+<p><strong>FONTOS!</strong><br></p>
+<ul>
+<li>
+<p>A <code>range()</code> függvényhez hasonlóan, az intervallum vége nyitott, azaz a második helyen megadott indexű elem már nem lesz része az eredménynek!</p>
+</li>
+<li>
 <p>A szeletelésnél mindegyik paraméter elhagyható.</p>
+</li>
+<li>
 <p>Ha elhagyunk egy paramétert ezek lesznek az alapértelmezett értékek:</p>
 <ol>
-<li>az első paraméter <strong>0</strong>,</li>
+<li>az első paraméter <code>0</code>,</li>
 <li>a második paraméter a <strong>sztring hossza</strong>,</li>
-<li>a harmadik paraméter pedig <strong>1</strong>.</li>
+<li>a harmadik paraméter pedig <code>1</code>.</li>
 </ol>
+</li>
+</ul>
 <h3>
 <a id="user-content-sorozatok-hosszúsága" class="anchor" href="#sorozatok-hossz%C3%BAs%C3%A1ga" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Sorozatok hosszúsága</h3>
-<p>Python nyelven a sorozatok hosszát a beépített <em>len()</em> függvény segítségével tudjuk legegyszerűbben lekérdezni. A hossz:</p>
+<p>Python nyelven a sorozatok hosszát a beépített <code>len()</code> függvény segítségével tudjuk legegyszerűbben lekérdezni. A hossz:</p>
 <ul>
 <li>
 <strong>listák</strong> esetében a <strong>lista elemeinek számát</strong>,</li>

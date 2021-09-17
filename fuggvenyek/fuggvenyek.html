@@ -72,22 +72,22 @@
 <p><a href="x_negyzet_fuggveny.png" target="_blank" rel="noopener noreferrer"><img src="x_negyzet_fuggveny.png" alt="x négyzet függvény" title="x négyzet függvény" style="max-width:100%;"></a></p>
 <p>A függvényekkel két dolgot csinálunk a programokban:</p>
 <ul>
-<li>Definiálhatunk új, saját függvényeket</li>
-<li>Meghívhatunk függvényeket</li>
+<li>Definiálhatunk új, saját függvényeket.</li>
+<li>Meghívhatunk függvényeket.</li>
 </ul>
 <h2>
 <a id="user-content-függvények-definiálása" class="anchor" href="#f%C3%BCggv%C3%A9nyek-defini%C3%A1l%C3%A1sa" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Függvények definiálása</h2>
 <p>Saját függvények megadásához <strong>definiálnunk</strong> kell őket. Ez Python nyelven mindig így néz ki:</p>
 <p><a href="fuggveny_definialasa.png" target="_blank" rel="noopener noreferrer"><img src="fuggveny_definialasa.png" alt="Függvény definiálása" title="Függvény definiálása" style="max-width:100%;"></a></p>
 <ul>
-<li>A paraméterlista elemeit <strong>paramétereknek</strong> nevezzük, ezek a függvény bemenő adatai (x négyzet esetén az <strong>x</strong> egy paraméter).</li>
+<li>A paraméterlista elemeit <strong>paramétereknek</strong> nevezzük, ezek a függvény bemenő adatai (x négyzet esetén az <code>x</code> egy paraméter).</li>
 <li>A paraméterlista lehet üres, de a kerek zárójeleket ilyenkor is ki kell írni!</li>
 <li>Ha egynél több paramétere van egy függvénynek, azokat vesszővel választjuk el egymástól.</li>
 </ul>
 <p><a href="teglalap_kerulet_fuggveny.png" target="_blank" rel="noopener noreferrer"><img src="teglalap_kerulet_fuggveny.png" alt="Téglalap kerület függvény" title="Téglalap kerület függvény" style="max-width:100%;"></a></p>
 <ul>
 <li>A függvény bemenő adataira, <strong>paramétereire</strong> a nevükkel kell hivatkozni a függvény törzsében, a változókhoz hasonlóan.</li>
-<li>Egy függvényből visszatérni a <strong>return</strong> kulcsszóval lehet. Ekkor a függvény kimenete (visszatérített értéke) a return melletti érték lesz.</li>
+<li>Egy függvényből visszatérni a <code>return</code> kulcsszóval lehet. Ekkor a függvény kimenete (visszatérített értéke) a <code>return</code> melletti érték lesz.</li>
 <li>A függvényhez tartozó utasításokat egy <strong>blokk</strong> jelöli ki, amit a definíció elején található <em>kettőspont</em> jelöl. A blokkhoz tartozó utasításokat 4 szóközzel, vagy egy tabulátorral beljebb kell írni!</li>
 </ul>
 <h2>
@@ -101,27 +101,25 @@
 <a id="user-content-példa-függvényhívásokra" class="anchor" href="#p%C3%A9lda-f%C3%BCggv%C3%A9nyh%C3%ADv%C3%A1sokra" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Példa függvényhívásokra:</h3>
 <p><a href="fuggvenyhivasok.png" target="_blank" rel="noopener noreferrer"><img src="fuggvenyhivasok.png" alt="Függvényhívások" title="Függvényhívások" style="max-width:100%;"></a></p>
 <ul>
-<li>Először a negyzet_kerulet() függvényt hívjuk, 1 argumentummal. Ez az argumentum a 20, ami egy egész szám típusú érték.</li>
-<li>Aztán a print() függvényt hívjuk, 1 argumentummal. Az átadott bemeneti érték a <em>"Python life"</em> szöveg (string). Ez a függvény azért más színű, mert a print() függvény beépített függvény, azaz nem mi definiáltuk, hanem része a nyelvnek.</li>
-<li>Végül a teglalap_terulet() függvényt hívjuk, 2 argumentummal. A két argumentum rendre a 100 és a 20 egész számok.</li>
+<li>Először a <code>negyzet_kerulet()</code> függvényt hívjuk, 1 argumentummal. Ez az argumentum a <code>20</code>, ami egy egész szám típusú érték.</li>
+<li>Aztán a <code>print()</code> függvényt hívjuk, 1 argumentummal. Az átadott bemeneti érték a <code>"Python life"</code> szöveg (sztring). Ez a függvény azért más színű, mert a <code>print()</code> függvény beépített függvény, azaz nem mi definiáltuk, hanem része a nyelvnek.</li>
+<li>Végül a <code>teglalap_terulet()</code> függvényt hívjuk, 2 argumentummal. A két argumentum rendre a <code>100</code> és a <code>20</code> egész számok.</li>
 </ul>
 <h3>
 <a id="user-content-vegyük-például-a-következő-programot" class="anchor" href="#vegy%C3%BCk-p%C3%A9ld%C3%A1ul-a-k%C3%B6vetkez%C5%91-programot" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Vegyük például a következő programot:</h3>
 <p><a href="negyzet_kerulet_01.png" target="_blank" rel="noopener noreferrer"><img src="negyzet_kerulet_01.png" alt="Négyzet kerület 1" title="Négyzet kerület 1" style="max-width:100%;"></a></p>
-<p>Amikor a <strong>kerulet</strong> változónak értéket adunk, először a jobb oldal hajtódik végre. <strong>Meghívjuk</strong> a saját negyzet_kerulet() függvényünket, a 20 argumentummal. A vezérlés átkerül a függvényhez, az <em>oldal</em> nevű paraméter pedig ebben a függvényhívásban a 20 értéket veszi fel.</p>
+<p>Amikor a <code>kerulet</code> változónak értéket adunk, először a jobb oldal hajtódik végre. <strong>Meghívjuk</strong> a saját <code>negyzet_kerulet()</code> függvényünket, a <code>20</code> argumentummal. A vezérlés átkerül a függvényhez, az <code>oldal</code> nevű paraméter pedig ebben a függvényhívásban a <code>20</code> értéket veszi fel.</p>
 <p><a href="negyzet_kerulet_02.png" target="_blank" rel="noopener noreferrer"><img src="negyzet_kerulet_02.png" alt="Négyzet kerület 2" title="Négyzet kerület 2" style="max-width:100%;"></a></p>
 <p>Ezután végrehajtjuk a függvény utasításait. Kiszámoljuk a
-<em>4 * oldal</em> kifejezés értékét, ami 80.</p>
+<code>4 * oldal</code> kifejezés értékét, ami <code>80</code>.</p>
 <p><a href="negyzet_kerulet_03.png" target="_blank" rel="noopener noreferrer"><img src="negyzet_kerulet_03.png" alt="Négyzet kerület 3" title="Négyzet kerület 3" style="max-width:100%;"></a></p>
-<p>A függvény itt befejezi a működését, a  <strong>return</strong> kulcsszóval visszaadjuk a kiszámolt a értéket.</p>
+<p>A függvény itt befejezi a működését, a <code>return</code> kulcsszóval visszaadjuk a kiszámolt a értéket.</p>
 <p><a href="negyzet_kerulet_04.png" target="_blank" rel="noopener noreferrer"><img src="negyzet_kerulet_04.png" alt="Négyzet kerület 4" title="Négyzet kerület 4" style="max-width:100%;"></a></p>
-<p>A vezérlés visszakerül a főprogramhoz, a függvény által visszaadott 80 értéket behelyettesítjük a hívás helyére. A <strong>kerulet</strong> változóban tároljuk a 80 értéket.</p>
-<p>Végül egy print() függvényhívás következik, aminek 1 db argumentuma lesz: a <strong>kerulet</strong> változóban tárolt érték. A függvény a futtatás után kiírja a képernyőre a 80 értéket.</p>
+<p>A vezérlés visszakerül a főprogramhoz, a függvény által visszaadott <code>80</code> értéket behelyettesítjük a hívás helyére. A <code>kerulet</code> változóban tároljuk a <code>80</code> értéket.</p>
+<p>Végül egy <code>print()</code> függvényhívás következik, aminek 1 db argumentuma lesz: a <code>kerulet</code> változóban tárolt érték. A függvény a futtatás után kiírja a képernyőre a <code>80</code> értéket.</p>
 <p><a href="negyzet_kerulet_05.png" target="_blank" rel="noopener noreferrer"><img src="negyzet_kerulet_05.png" alt="Négyzet kerület 5" title="Négyzet kerület 5" style="max-width:100%;"></a></p>
-<blockquote>
-<p>Az olyan függvényeket, amelyek nem térnek vissza semmilyen értékkel (nincs outputjuk) <strong>eljárás</strong>oknak nevezzük. Ilyen például a beépített print() függvény is, ami kiír a képernyőre, de nem tér vissza
-semmilyen értékkel.</p>
-</blockquote>
+<p>MEGJEGYZÉS<br>
+Az olyan függvényeket, amelyek nem térnek vissza semmilyen értékkel (nincs outputjuk) <strong>eljárás</strong>oknak nevezzük. Ilyen például a beépített <code>print()</code> függvény is, ami kiír a képernyőre, de nem tér vissza semmilyen értékkel.</p>
 <p><a href="../README.md">Vissza a főoldalra</a></p>
 
               </article>

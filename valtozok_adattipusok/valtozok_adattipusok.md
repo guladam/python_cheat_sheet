@@ -35,6 +35,6 @@ A következő kifejezésekre:
 1 < 10
 5 == 5
 ```
-*eldöntendő kérdésként* hivatkozunk korábban.
+*eldöntendő kérdésként* hivatkoztunk korábban.
 
 [Vissza a főoldalra](../README.md)

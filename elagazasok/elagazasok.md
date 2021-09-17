@@ -1,10 +1,10 @@
 ## Elágazások
 
-Pythonban elágaztató utasításhoz az *if* és az *else* kulcsszavakat használjuk. Az ilyen utasításokhoz mindig szükségünk van egy logikai kifejezésre (eldöntendő kérdésre) is. Csakúgy, mint táblázatkezelésnél, a hamis (else) ágat nem kötelező megadni, amennyiben nincs külön teendőnk nemleges válasz esetén. Az utasítás így épül fel Python nyelven:
+Pythonban elágaztató utasításhoz az `if` és az `else` kulcsszavakat használjuk. Az ilyen utasításokhoz mindig szükségünk van egy logikai kifejezésre (eldöntendő kérdésre) is. Csakúgy, mint táblázatkezelésnél, a hamis (`else`) ágat nem kötelező megadni, amennyiben nincs külön teendőnk nemleges válasz esetén. Az utasítás így épül fel Python nyelven:
 
 ![if utasítás](if_utasitas.png "if utasítás")
 
-Nézzünk egy-egy példát, ahol egymás mellett van az algoritmust leíró folyamatábra, és a Python nyelvű forráskód. Az első példában van else (hamis) ág is, a második példában pedig elhagyjuk a hamis ágat.
+Nézzünk egy-egy példát, ahol egymás mellett van az algoritmust leíró folyamatábra, és a Python nyelvű forráskód. Az első példában van `else` (hamis) ág is, a második példában pedig elhagyjuk a hamis ágat.
 
 A folyamatábrák értelmezéséhez ismétlésképpen itt egy összefoglaló táblázat:
 

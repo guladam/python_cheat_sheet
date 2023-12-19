@@ -12,7 +12,7 @@ Emiatt fontos kiemelni, hogy ez a dokumentum önmagában nem alkalmas tanításr
 - [Elágazások](elagazasok/elagazasok.md)
 - [While ciklus](while_ciklus/while_ciklus.md)
 - [Listák](listak/listak.md)
-- [Sorozatokról bővebben: bejárás, szeletés, hossz lekérdezése, szorzás](sorozatok/sorozatok.md)
+- [Sorozatokról bővebben: bejárás, szeletelés, hossz lekérdezése, szorzás](sorozatok/sorozatok.md)
 - [Sztringműveletek](sztringmuveletek/sztringmuveletek.md)
 - [Fájlkezelés](fajlkezeles/fajlkezeles.md)
 

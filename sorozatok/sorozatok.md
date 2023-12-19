@@ -1,4 +1,4 @@
-## Sorozatokról bővebben: bejárás, szeletés, hossz lekérdezése, szorzás
+## Sorozatokról bővebben: bejárás, szeletelés, hossz lekérdezése, szorzás
 
 ### Sorozatok bejárása
 
